@@ -119,12 +119,51 @@
 
 }
 
+/* ESERCIZIO 10 */
+
 .ex-10-icon {
     font-size: 60px;
+    transition: transform 0.5 ease;
 }
+
+.ex-10-icon:hover {
+    animation: spin 2s linear infinite;
+}
+@keyframes spin {
+    0% {
+        transform: rotate(0deg);
+    }
+    100% {
+        transform: rotate(360deg);
+    }
+}
+
+/* ESERCIZIO 11 */
+
 .ex-11-icon {
     font-size: 60px;
+    transition: transform 0.5 ease;
+
 }
+
+.ex-11-icon:hover {
+    animation: spin 4s linear infinite;
+}
+@keyframes spin {
+    0% {
+        transform: rotate(0deg);
+    }
+    50% {
+        transform: rotate(300deg);
+    }
+    70%{
+        transform: rotate(0deg);
+    }
+
+}
+
+/* esercizio 12 */
+
 .ex-12-button, .ex-13-button {
     position: relative;
     display: block;
@@ -154,3 +193,104 @@
     width: 60px;
     height: 20px;
 }
+
+
+.ex-12-button:hover .ex-12-top-white {
+    animation: moveTopWhite 5s linear;
+}
+
+@keyframes moveTopWhite {
+    0% {
+        left: 10%;
+    }
+    100% {
+        left: calc(50% - 30px);
+    }
+}
+
+.ex-12-button:hover  .ex-12-bottom-white {
+    animation: moveBottomWhite 5s linear;
+
+}
+
+@keyframes moveBottomWhite {
+    0% {
+        right: 10%;
+    }
+    100% {
+        right: calc(50% - 30px);
+    }
+}
+
+/* ESERCIZIO 13 */
+
+/* .ex-13-button:hover .ex-13-top-white,
+.ex-13-button:hover .ex-13-bottom-white {
+    animation: spinClockwise 2s linear;
+}
+
+@keyframes spinClockwise {
+    0% {
+        transform: rotate(0deg);
+    }
+    100% {
+        transform: rotate(360deg);
+    }
+}  */
+
+.ex-13-button:hover .ex-13-top-white {
+    animation: moveCompletelyTop 4s linear;
+
+}
+
+.ex-13-button:hover .ex-13-bottom-white {
+    animation: moveCompletelyBottom 4s linear;
+
+}
+
+@keyframes moveCompletelyTop {
+    0% {
+        left: 10%; 
+        top: -10px; 
+    }
+    25% {
+        left: calc(50% - 30px); 
+        top: -10px; 
+    }
+    50% {
+        left: calc(50% - 30px); 
+        top: 30px; 
+    }
+    75% {
+        left: 10%; 
+        top: 30px; 
+    }
+    100% {
+        left: 10%; 
+        top: -10px; 
+    }
+}
+
+@keyframes moveCompletelyBottom {
+    0% {
+        right: 10%; 
+        bottom: -10px; 
+    }
+    25% {
+        right: calc(50% - 30px); 
+        bottom: -10px; 
+    }
+    50% {
+        right: calc(50% - 30px); 
+        bottom: 30px; 
+    }
+    75% {
+        right: 10%; 
+        bottom: 30px; 
+    }
+    100% {
+        right: 10%; 
+        bottom: -10px; 
+    }
+}
+   
